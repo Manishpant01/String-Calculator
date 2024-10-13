@@ -15,6 +15,13 @@ class strCalculator {
     }
 
     const numbersArray = numbers.split(delimiter).map(Number); // convert str in array
+
+    const isNegativeNumbers = numbersArray.filter((number) => number < 0);
+    if (isNegativeNumbers.length)
+      throw new Error(
+        `negative numbers not allowed ${isNegativeNumbers.join(", ")}`
+      );
+
     return numbersArray.reduce((sum, num) => sum + num, 0);
   }
 }
@@ -26,3 +33,4 @@ console.log(calculator.add("2,3"));
 console.log(calculator.add("2,3,7,5"));
 console.log(calculator.add("1\n2,3"));
 console.log(calculator.add("//|\n4|5|6"));
+console.log(calculator.add("1,-2,-3"));
