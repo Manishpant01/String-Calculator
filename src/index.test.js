@@ -1,3 +1,4 @@
+import { strCalculator } from './index';
 //Info: steps to be taken for creating str calculator
 
 // steps:-
@@ -15,7 +16,10 @@
 // 9. should throw an error for multiple negative numbers
 
 describe("StringCalculator", () => {
-  beforeEach(() => {});
+    let calculator: strCalculator;
+  beforeEach(() => {
+    calculator = new strCalculator();
+  });
 
   it('should handle empty string case', () => {
     expect(calculator.add('')).toBe(0);
