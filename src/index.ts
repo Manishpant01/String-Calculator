@@ -28,9 +28,5 @@ class strCalculator {
 
 const calculator = new strCalculator();
 console.log(calculator.add(""));
-console.log(calculator.add("1"));
-console.log(calculator.add("2,3"));
-console.log(calculator.add("2,3,7,5"));
-console.log(calculator.add("1\n2,3"));
-console.log(calculator.add("//|\n4|5|6"));
-console.log(calculator.add("1,-2,-3"));
+
+export { strCalculator };
