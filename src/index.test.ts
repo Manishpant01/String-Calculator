@@ -39,5 +39,10 @@ describe("StringCalculator", () => {
     expect(calculator.add('1,2,3,4')).toBe(10);
     expect(calculator.add('5,10,15')).toBe(30);
   });
+
+  it('should handle new lines "/n" and return sum of them', () => {
+    expect(calculator.add('1\n2,3')).toBe(6);
+    expect(calculator.add('4\n5\n6')).toBe(15);
+  });
  
 });
