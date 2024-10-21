@@ -49,5 +49,11 @@ describe("StringCalculator", () => {
     expect(calculator.add('//;\n1;2;3')).toBe(6);
     expect(calculator.add('//|\n4|5|6')).toBe(15);
   });
+  
+  it('should throw an error for negative numbers', () => {
+    expect(() => calculator.add('1,-2,3')).toThrow(
+      'negative numbers not allowed -2'
+    );
+  });
  
 });
