@@ -21,5 +21,8 @@ describe("StringCalculator", () => {
     calculator = new strCalculator();
   });
 
+  it('should handle empty string case', () => {
+    expect(calculator.add('')).toBe(0);
+  });
  
 });
