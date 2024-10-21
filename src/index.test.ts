@@ -24,5 +24,10 @@ describe("StringCalculator", () => {
   it('should handle empty string case', () => {
     expect(calculator.add('')).toBe(0);
   });
+
+  it('should handle single numbers and return a same integer number', () => {
+    expect(calculator.add('1')).toBe(1);
+    expect(calculator.add('5')).toBe(5);
+  });
  
 });
