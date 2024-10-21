@@ -29,5 +29,15 @@ describe("StringCalculator", () => {
     expect(calculator.add('1')).toBe(1);
     expect(calculator.add('5')).toBe(5);
   });
+
+  it('should handle two comma-separated numbers and return sum of them', () => {
+    expect(calculator.add('1,2')).toBe(3);
+    expect(calculator.add('3,5')).toBe(8);
+  });
+
+  it('should handle an multiple amount of numbers and return sum of them', () => {
+    expect(calculator.add('1,2,3,4')).toBe(10);
+    expect(calculator.add('5,10,15')).toBe(30);
+  });
  
 });
