@@ -2,9 +2,10 @@ class strCalculator {
   add(numbers :string){
     if (!numbers) return 0; // handle empty string case
 
-    const numbersArray = numbers.split(',').map(Number);
-    return numbersArray.reduce((sum, num) => sum + num, 0);
+    let delimiter = /[,\n]/; // for newline & comma
 
+    const numbersArray = numbers.split(delimiter).map(Number);
+    return numbersArray.reduce((sum, num) => sum + num, 0);
   }
 
 
