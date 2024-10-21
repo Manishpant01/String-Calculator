@@ -55,5 +55,10 @@ describe("StringCalculator", () => {
       'negative numbers not allowed -2'
     );
   });
- 
+
+  it('should throw an error for multiple negative numbers', () => {
+    expect(() => calculator.add('1,-2,-3')).toThrow(
+      'negative numbers not allowed -2, -3'
+    );
+  });
 });
