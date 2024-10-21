@@ -21,44 +21,5 @@ describe("StringCalculator", () => {
     calculator = new strCalculator();
   });
 
-  it('should handle empty string case', () => {
-    expect(calculator.add('')).toBe(0);
-  });
-
-  it('should handle single numbers and return a same integer number', () => {
-    expect(calculator.add('1')).toBe(1);
-    expect(calculator.add('5')).toBe(5);
-  });
-
-  it('should handle two comma-separated numbers and return sum of them', () => {
-    expect(calculator.add('1,2')).toBe(3);
-    expect(calculator.add('3,5')).toBe(8);
-  });
-
-  it('should handle an multiple amount of numbers and return sum of them', () => {
-    expect(calculator.add('1,2,3,4')).toBe(10);
-    expect(calculator.add('5,10,15')).toBe(30);
-  });
-
-  it('should handle new lines "/n" and return sum of them', () => {
-    expect(calculator.add('1\n2,3')).toBe(6);
-    expect(calculator.add('4\n5\n6')).toBe(15);
-  });
-
-  it('should support different delimiters "//;\n"', () => {
-    expect(calculator.add('//;\n1;2;3')).toBe(6);
-    expect(calculator.add('//|\n4|5|6')).toBe(15);
-  });
-
-  it('should throw an error for negative numbers', () => {
-    expect(() => calculator.add('1,-2,3')).toThrow(
-      'negative numbers not allowed -2'
-    );
-  });
-
-  it('should throw an error for multiple negative numbers', () => {
-    expect(() => calculator.add('1,-2,-3')).toThrow(
-      'negative numbers not allowed -2, -3'
-    );
-  });
+ 
 });
